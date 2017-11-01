@@ -6,31 +6,62 @@
 
 import '@stencil/router';
 
-import { MyName as MyName } from './components/my-name/my-name';
+import { TodoList as TodoList } from './components/todo-list/todo-list';
 
-interface HTMLMyNameElement extends MyName, HTMLElement {
+interface HTMLTodoListElement extends TodoList, HTMLElement {
 }
-declare var HTMLMyNameElement: {
-  prototype: HTMLMyNameElement;
-  new (): HTMLMyNameElement;
+declare var HTMLTodoListElement: {
+  prototype: HTMLTodoListElement;
+  new (): HTMLTodoListElement;
 };
 declare global {
   interface HTMLElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+      "todo-list": HTMLTodoListElement;
   }
   interface ElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+      "todo-list": HTMLTodoListElement;
   }
   namespace JSX {
       interface IntrinsicElements {
-          "my-name": JSXElements.MyNameAttributes;
+          "todo-list": JSXElements.TodoListAttributes;
       }
   }
   namespace JSXElements {
-      export interface MyNameAttributes extends HTMLAttributes {
+      export interface TodoListAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
         
-          first?: any,
-          last?: any
+      }
+  }
+}
+
+import { Todo as MyTodo } from './components/todo/todo';
+
+interface HTMLMyTodoElement extends MyTodo, HTMLElement {
+}
+declare var HTMLMyTodoElement: {
+  prototype: HTMLMyTodoElement;
+  new (): HTMLMyTodoElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "my-todo": HTMLMyTodoElement;
+  }
+  interface ElementTagNameMap {
+      "my-todo": HTMLMyTodoElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "my-todo": JSXElements.MyTodoAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface MyTodoAttributes extends HTMLAttributes {
+          mode?: string,
+          color?: string,
+        
+          value?: string,
+          id?: string
       }
   }
 }
