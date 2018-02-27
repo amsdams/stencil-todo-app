@@ -17,29 +17,29 @@ declare global {
 
 
 import {
-  TodoList as TodoList
+  TodoList as MyTodoList
 } from './components/todo-list/todo-list';
 
 declare global {
-  interface HTMLTodoListElement extends TodoList, HTMLStencilElement {
+  interface HTMLMyTodoListElement extends MyTodoList, HTMLStencilElement {
   }
-  var HTMLTodoListElement: {
-    prototype: HTMLTodoListElement;
-    new (): HTMLTodoListElement;
+  var HTMLMyTodoListElement: {
+    prototype: HTMLMyTodoListElement;
+    new (): HTMLMyTodoListElement;
   };
   interface HTMLElementTagNameMap {
-    "todo-list": HTMLTodoListElement;
+    "my-todo-list": HTMLMyTodoListElement;
   }
   interface ElementTagNameMap {
-    "todo-list": HTMLTodoListElement;
+    "my-todo-list": HTMLMyTodoListElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "todo-list": JSXElements.TodoListAttributes;
+      "my-todo-list": JSXElements.MyTodoListAttributes;
     }
   }
   namespace JSXElements {
-    export interface TodoListAttributes extends HTMLAttributes {
+    export interface MyTodoListAttributes extends HTMLAttributes {
       
     }
   }

@@ -1,7 +1,7 @@
 const sass = require('@stencil/sass');
 exports.config = {
 	bundles : [ {
-		components : [ 'todo-list', 'my-todo' ]
+		components : [ 'my-todo-list', 'my-todo' ]
 	} ],
 	collections : [ {
 		name : '@stencil/router'

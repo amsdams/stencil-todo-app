@@ -1,7 +1,7 @@
 import { Component, State, Listen } from '@stencil/core';
 
 @Component({
-  tag: 'todo-list',
+  tag: 'my-todo-list',
   styleUrl: 'todo-list.scss'
 })
 export class TodoList {
