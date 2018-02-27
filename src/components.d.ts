@@ -17,29 +17,29 @@ declare global {
 
 
 import {
-  TodoList as MyTodoList
-} from './components/todo-list/todo-list';
+  BookList as MyBookList
+} from './components/book-list/book-list';
 
 declare global {
-  interface HTMLMyTodoListElement extends MyTodoList, HTMLStencilElement {
+  interface HTMLMyBookListElement extends MyBookList, HTMLStencilElement {
   }
-  var HTMLMyTodoListElement: {
-    prototype: HTMLMyTodoListElement;
-    new (): HTMLMyTodoListElement;
+  var HTMLMyBookListElement: {
+    prototype: HTMLMyBookListElement;
+    new (): HTMLMyBookListElement;
   };
   interface HTMLElementTagNameMap {
-    "my-todo-list": HTMLMyTodoListElement;
+    "my-book-list": HTMLMyBookListElement;
   }
   interface ElementTagNameMap {
-    "my-todo-list": HTMLMyTodoListElement;
+    "my-book-list": HTMLMyBookListElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-todo-list": JSXElements.MyTodoListAttributes;
+      "my-book-list": JSXElements.MyBookListAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyTodoListAttributes extends HTMLAttributes {
+    export interface MyBookListAttributes extends HTMLAttributes {
       
     }
   }
@@ -47,29 +47,29 @@ declare global {
 
 
 import {
-  Todo as MyTodo
-} from './components/todo/todo';
+  Book as MyBook
+} from './components/book/book';
 
 declare global {
-  interface HTMLMyTodoElement extends MyTodo, HTMLStencilElement {
+  interface HTMLMyBookElement extends MyBook, HTMLStencilElement {
   }
-  var HTMLMyTodoElement: {
-    prototype: HTMLMyTodoElement;
-    new (): HTMLMyTodoElement;
+  var HTMLMyBookElement: {
+    prototype: HTMLMyBookElement;
+    new (): HTMLMyBookElement;
   };
   interface HTMLElementTagNameMap {
-    "my-todo": HTMLMyTodoElement;
+    "my-book": HTMLMyBookElement;
   }
   interface ElementTagNameMap {
-    "my-todo": HTMLMyTodoElement;
+    "my-book": HTMLMyBookElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "my-todo": JSXElements.MyTodoAttributes;
+      "my-book": JSXElements.MyBookAttributes;
     }
   }
   namespace JSXElements {
-    export interface MyTodoAttributes extends HTMLAttributes {
+    export interface MyBookAttributes extends HTMLAttributes {
       id?: string;
       value?: string;
     }

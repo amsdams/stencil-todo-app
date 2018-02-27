@@ -1,24 +1,24 @@
 import { flush, render } from '@stencil/core/testing';
-import { Todo } from './todo';
+import { bookList } from './book-list';
 
-describe('todo', () => {
+describe('book-list', () => {
   it('should build', () => {
-    expect(new Todo()).toBeTruthy();
+    expect(new bookList()).toBeTruthy();
   });
 
   describe('rendering', () => {
     let element;
     beforeEach(async () => {
       element = await render({
-        components: [Todo],
-        html: '<my-todo></my-todo>'
+        components: [bookList],
+        html: '<my-book-list></my-book-list>'
       });
     });
 
-    /*it('should work without parameters', () => {
+  /*  it('should work without parameters', () => {
 		console.log('element'+element);
-    });*/
-
+    });
+*/
     
   });
 });
